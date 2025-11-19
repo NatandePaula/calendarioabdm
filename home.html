@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
     
-    <title>Login</title>
+    <title>Página Inicial</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     
     <script src="../assets/js/color-modes.js"></script>
@@ -13,7 +13,7 @@
     <meta name="theme-color" content="#712cf9" />
     <link href="sign-in.css" rel="stylesheet" />
     <style>
-        .bd-placeholder-img {
+      .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
         -webkit-user-select: none;
@@ -85,36 +85,25 @@
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
       }
-      html,
-body {
-  height: 100%;
-}
+        .form-control-dark {
+        border-color: var(--bs-gray);
+        }
+        .form-control-dark:focus {
+        border-color: #fff;
+        box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+        }
 
-.form-signin {
-  max-width: 330px;
-  padding: 1rem;
-}
+        .text-small {
+        font-size: 85%;
+        }
 
-.form-signin .form-floating:focus-within {
-  z-index: 2;
-}
-
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
+        .dropdown-toggle:not(:focus) {
+        outline: 0;
+        }
 
     </style>
 </head>
-  <body class="d-flex align-items-center py-4 bg-body-tertiary">
+<body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path
@@ -170,7 +159,7 @@ body {
             <svg class="bi me-2 opacity-50" aria-hidden="true">
               <use href="#sun-fill"></use>
             </svg>
-            Claro
+            Light
             <svg class="bi ms-auto d-none" aria-hidden="true">
               <use href="#check2"></use>
             </svg>
@@ -186,7 +175,7 @@ body {
             <svg class="bi me-2 opacity-50" aria-hidden="true">
               <use href="#moon-stars-fill"></use>
             </svg>
-            Escuro
+            Dark
             <svg class="bi ms-auto d-none" aria-hidden="true">
               <use href="#check2"></use>
             </svg>
@@ -210,47 +199,92 @@ body {
         </li>
       </ul>
     </div>
-    <main class="form-signin w-100 m-auto">
-      <form>
-        <div class="form-floating text-center">
-          <img
-            class="mb-1 rounded "
-            src="Artboard 1.png"
-            alt=""
-            width="200"
-            height="200"
+    
+    <header class="p-3 mb-3 border-bottom">
+        <div class="container">
+          <div
+            class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+          >
+            <a
+              href="home.html"
+              class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none"
+            >
+              <img
+                class="bi me-2"
+                width="200
+                "
+                height="45"
+                role="img"
+                aria-label="Logo"
+                src="Artboard 16.png"
+              >
+                
+        </img>
+            </a>
+            <ul
+              class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+            >
+              <li>
+                <a href="home.html" class="nav-link px-2 link-secondary">Inicio</a>
+              </li>
+              <li>
+                <a href="calendario.html" class="nav-link px-2 link-body-emphasis"
+                  >Calendário</a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link px-2 link-body-emphasis"
+                  >Acolhidos</a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link px-2 link-body-emphasis"
+                  >Medicamentos</a
+                >
+              </li>
+              <li>
+                <a href="#" class="nav-link px-2 link-body-emphasis"
+                  >Relatório</a
+                >
+              </li>
+            </ul>
             
-          />
+            <div class="dropdown text-end">
+              <a
+                href="#"
+                class="d-block link-body-emphasis text-decoration-none dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+</svg>
+              </a>
+              <ul class="dropdown-menu text-small">
+                <li><a class="dropdown-item" href="#">New project...</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="index.html">Sair</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <h1 class="h3 mb-3  text-center">Faça seu login</h1>
-        <div class="form-floating">
-          <input
-           
-            type="text"
-            class="form-control"
-            id="floatingPassword"
-            placeholder="name@example.com"
-          />
-          <label for="floatingInput">Nome de usuário</label>
-        </div>
-        <div class="form-floating">
-          <input
-            type="password"
-            class="form-control"
-            id="floatingPassword"
-            placeholder="Password"
-          />
-          <label for="floatingPassword">Senha</label>
-        </div>
-       
-        <button class="btn btn-primary w-100 py-2" type="submit">
-          Entrar
-        </button>
-        <p class="mt-5 mb-3 text-body-secondary">&copy;2025</p>
-      </form>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    class="astro-vvvwv3sm"
-    ></script>
+      </header>
+<!--
+    <h1>Iniciano com o Bootstrap</h1>
+
+    <div class="container-lg">
+        <h2>Primeiro topico</h2>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro atque commodi ad, modi sunt necessitatibus libero possimus officia quisquam, pariatur at consequatur nisi voluptates dolorum laborum accusantium, asperiores debitis soluta.</p>
+    
+
+    </div>
+    <button class="btn btn-primary">Clique aqui</button>
+    <button class="btn btn-secondary">Clique aqui</button>
+-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
