@@ -1,0 +1,1224 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="auto">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+
+  <title>Página Inicial</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+  <script src="<?php echo BASE_URL; ?>/assets/js/color-modes.js"></script>
+  <link href="<?php echo BASE_URL; ?>/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <meta name="theme-color" content="#712cf9" />
+  <link href="sign-in.css" rel="stylesheet" />
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+
+    .b-example-divider {
+      width: 100%;
+      height: 3rem;
+      background-color: #0000001a;
+      border: solid rgba(0, 0, 0, 0.15);
+      border-width: 1px 0;
+      box-shadow:
+        inset 0 0.5em 1.5em #0000001a,
+        inset 0 0.125em 0.5em #00000026;
+    }
+
+    .b-example-vr {
+      flex-shrink: 0;
+      width: 1.5rem;
+      height: 100vh;
+    }
+
+    .bi {
+      vertical-align: -0.125em;
+      fill: currentColor;
+    }
+
+    .nav-scroller {
+      position: relative;
+      z-index: 2;
+      height: 2.75rem;
+      overflow-y: hidden;
+    }
+
+    .nav-scroller .nav {
+      display: flex;
+      flex-wrap: nowrap;
+      padding-bottom: 1rem;
+      margin-top: -1px;
+      overflow-x: auto;
+      text-align: center;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .btn-bd-primary {
+      --bd-violet-bg: #712cf9;
+      --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+      --bs-btn-font-weight: 600;
+      --bs-btn-color: var(--bs-white);
+      --bs-btn-bg: var(--bd-violet-bg);
+      --bs-btn-border-color: var(--bd-violet-bg);
+      --bs-btn-hover-color: var(--bs-white);
+      --bs-btn-hover-bg: #6528e0;
+      --bs-btn-hover-border-color: #6528e0;
+      --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+      --bs-btn-active-color: var(--bs-btn-hover-color);
+      --bs-btn-active-bg: #5a23c8;
+      --bs-btn-active-border-color: #5a23c8;
+    }
+
+    .bd-mode-toggle {
+      z-index: 1500;
+    }
+
+    .bd-mode-toggle .bi {
+      width: 1em;
+      height: 1em;
+    }
+
+    .bd-mode-toggle .dropdown-menu .active .bi {
+      display: block !important;
+    }
+
+    .form-control-dark {
+      border-color: var(--bs-gray);
+    }
+
+    .form-control-dark:focus {
+      border-color: #fff;
+      box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+    }
+
+    .text-small {
+      font-size: 85%;
+    }
+
+    .dropdown-toggle:not(:focus) {
+      outline: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check2" viewBox="0 0 16 16">
+      <path
+        d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z">
+      </path>
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path
+        d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z">
+      </path>
+      <path
+        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z">
+      </path>
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path
+        d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z">
+      </path>
+    </symbol>
+  </svg>
+  <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+      aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+      <svg class="bi my-1 theme-icon-active" aria-hidden="true">
+        <use href="#circle-half"></use>
+      </svg>
+      <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+          aria-pressed="false">
+          <svg class="bi me-2 opacity-50" aria-hidden="true">
+            <use href="#sun-fill"></use>
+          </svg>
+          Light
+          <svg class="bi ms-auto d-none" aria-hidden="true">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+          aria-pressed="false">
+          <svg class="bi me-2 opacity-50" aria-hidden="true">
+            <use href="#moon-stars-fill"></use>
+          </svg>
+          Dark
+          <svg class="bi ms-auto d-none" aria-hidden="true">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+          aria-pressed="true">
+          <svg class="bi me-2 opacity-50" aria-hidden="true">
+            <use href="#circle-half"></use>
+          </svg>
+          Auto
+          <svg class="bi ms-auto d-none" aria-hidden="true">
+            <use href="#check2"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="<?php echo BASE_URL; ?>/views/home.php"
+          class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+          <img class="bi me-2" width="200
+                " height="45" role="img" aria-label="Logo" src="/abdm/views/imagens/Logo2 colorida.png">
+
+          </img>
+        </a>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li>
+            <a href="<?php echo BASE_URL; ?>/views/home.php" class="nav-link px-2 link-body-emphasis">Inicio</a>
+          </li>
+          <li>
+            <a href="<?php echo BASE_URL; ?>/views/calendario.php"
+              class="nav-link px-2 link-body-emphasis">Calendário</a>
+          </li>
+          <li>
+             <div class="dropdown text-end">
+              
+              <a href="#" class="nav-link px-2 link-body-emphasis"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Acolhidos
+              </a>
+              
+              <ul class="dropdown-menu text-small">
+                <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>/views/acolhidos.php">Acolhidos</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Atendimentos</a></li>
+                <li><a class="dropdown-item" href="#">Evolução</a></li>
+                <li><a class="dropdown-item" href="#">Saúde</a></li>
+                <li><a class="dropdown-item" href="#">PIA</a></li>
+              </ul>
+            </div>
+          </li><li>
+             <div class="dropdown text-end">
+              
+              <a href="#" class="nav-link px-2 link-body-emphasis"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Medicamentos
+              </a>
+              
+              <ul class="dropdown-menu text-small">
+                <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>/dao/logout.">Quadros</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Estoque</a></li>
+                
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#" class="nav-link px-2 link-body-emphasis">Relatório</a>
+          </li>
+
+        </ul>
+
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+              class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+              <path fill-rule="evenodd"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+            </svg>
+          </a>
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li class="nav-link px-2 link-body-emphasis">
+              Sessão Expira em: <span id="tempo-restante">00:30</span>
+            </li>
+          </ul>
+          <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li><a class="dropdown-item" href="<?php echo BASE_URL; ?>/dao/logout.php">Sair</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="p-5 text-center bg-body-tertiary rounded-3">
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-12">
+            <div class="card shadow-lg border-0 rounded-lg">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="text-center font-weight-light my-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-person-plus-fill me-2" viewBox="0 0 16 16">
+                            <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                            <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5"/>
+                        </svg>
+                        Formulário Completo de Cadastro de Acolhido
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <!-- Formulário de Cadastro -->
+                    <form action="<?php echo BASE_URL; ?>/dao/salvar_acolhido.php" method="POST" id="form-cadastro">
+                        
+                        <!-- 1. INFORMAÇÕES PESSOAIS (Tabela 'acolhido') -->
+                        <h5 class="mt-4 mb-3 border-bottom pb-2 text-primary">Dados Pessoais e de Origem</h5>
+                        
+                        <div class="row mb-3">
+                            <!-- Nome Completo (coluna 'nome' em 'acolhido') -->
+                            <div class="col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input class="form-control" id="inputNomeCompleto" name="nome" type="text" placeholder="Nome Completo" required />
+                                    <label for="inputNomeCompleto">Nome Completo</label>
+                                </div>
+                            </div>
+                            <!-- Data de Nascimento (coluna 'dataNascimento' em 'acolhido') -->
+                            <div class="col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input class="form-control" id="inputDataNasc" name="data_nascimento" type="date" required />
+                                    <label for="inputDataNasc">Data de Nascimento</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <!-- CPF (coluna 'cpf' em 'acolhido') -->
+                            <div class="col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input class="form-control" id="inputCPF" name="cpf" type="text" placeholder="CPF" maxlength="14" required />
+                                    <label for="inputCPF">CPF</label>
+                                </div>
+                                <div class="invalid-feedback" id="cpf-feedback">
+                                    CPF inválido.
+                                </div>
+                            </div>
+                            <!-- Telefone (Adicionado aqui para balancear o layout) -->
+                            <div class="col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input class="form-control" id="inputTelefone" name="telefone" type="tel" placeholder="Telefone" />
+                                    <label for="inputTelefone">Telefone</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Opções de Nomes dos Pais -->
+                        <h5 class="mt-4 mb-3 border-bottom pb-2 text-primary">Filiação</h5>
+                        
+                        <div class="row mb-3">
+                            <!-- Nome da Mãe (mantido, mas agora opcional) -->
+                            <div class="col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input class="form-control" id="inputNomeMae" name="nome_mae" type="text" placeholder="Nome da Mãe" required />
+                                    <label for="inputNomeMae">Nome da Mãe</label>
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" value="1" id="maeNaoInformado" name="mae_nao_informado">
+                                    <label class="form-check-label" for="maeNaoInformado">
+                                        Nome da Mãe não informado / Não possui
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- Nome do Pai (novo campo) -->
+                            <div class="col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input class="form-control" id="inputNomePai" name="nome_pai" type="text" placeholder="Nome do Pai" required />
+                                    <label for="inputNomePai">Nome do Pai</label>
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" value="1" id="paiNaoInformado" name="pai_nao_informado">
+                                    <label class="form-check-label" for="paiNaoInformado">
+                                        Nome do Pai não informado / Não possui
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. ENDEREÇO DO ACOLHIDO (Tabela 'endereco' com autocomplete CEP) -->
+                        <h5 class="mt-4 mb-3 border-bottom pb-2 text-primary">Endereço do Acolhido</h5>
+
+                        <div class="row mb-3">
+                            <!-- CEP -->
+                            <div class="col-md-3 mb-3">
+                                <div class="form-floating">
+                                    <input class="form-control" id="inputCep" name="endereco_cep" type="text" placeholder="CEP" maxlength="9" required />
+                                    <label for="inputCep">CEP</label>
+                                </div>
+                                <div class="invalid-feedback" id="cep-feedback">
+                                    CEP inválido ou não encontrado.
+                                </div>
+                            </div>
+                            <!-- Rua/Logradouro -->
+                            <div class="col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input class="form-control" id="inputRua" name="endereco_rua" type="text" placeholder="Rua/Logradouro" required />
+                                    <label for="inputRua">Rua/Logradouro</label>
+                                </div>
+                            </div>
+                            <!-- Número -->
+                            <div class="col-md-3 mb-3">
+                                <div class="form-floating">
+                                    <input class="form-control" id="inputNumero" name="endereco_numero" type="number" placeholder="Número" required />
+                                    <label for="inputNumero">Número</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <!-- Cidade -->
+                            <div class="col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input class="form-control" id="inputCidade" name="endereco_cidade" type="text" placeholder="Cidade" required />
+                                    <label for="inputCidade">Cidade</label>
+                                </div>
+                            </div>
+                            <!-- Estado -->
+                            <div class="col-md-6 mb-3">
+                                <div class="form-floating">
+                                    <input class="form-control" id="inputEstado" name="endereco_estado" type="text" placeholder="Estado" required />
+                                    <label for="inputEstado">Estado</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 3. CURADOR/RESPONSÁVEL (Tabela 'curador' e 'endereco') -->
+                        <h5 class="mt-5 mb-3 border-bottom pb-2 text-primary">Curador/Responsável (curador_id)</h5>
+
+                        <div id="curador-container">
+                            <div class="row mb-3">
+                                <!-- Nome Curador -->
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-floating">
+                                        <input class="form-control curador-input" id="inputNomeCurador" name="curador_nome" type="text" placeholder="Nome do Curador" required />
+                                        <label for="inputNomeCurador">Nome do Curador</label>
+                                    </div>
+                                </div>
+                                <!-- CPF Curador -->
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-floating">
+                                        <input class="form-control curador-input" id="inputCpfCurador" name="curador_cpf" type="text" placeholder="CPF do Curador" maxlength="14" />
+                                        <label for="inputCpfCurador">CPF do Curador</label>
+                                    </div>
+                                    <div class="invalid-feedback" id="curador-cpf-feedback">
+                                        CPF inválido.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Endereço do Curador (Novo Bloco de Endereço) -->
+                            <div class="row mb-3">
+                                <div class="col-md-3 mb-3">
+                                    <div class="form-floating">
+                                        <input class="form-control curador-input curador-cep" id="inputCepCurador" name="curador_endereco_cep" type="text" placeholder="CEP Curador" maxlength="9" />
+                                        <label for="inputCepCurador">CEP Curador</label>
+                                    </div>
+                                    <div class="invalid-feedback" id="curador-cep-feedback">
+                                        CEP inválido ou não encontrado.
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-floating">
+                                        <input class="form-control curador-input curador-rua" id="inputRuaCurador" name="curador_endereco_rua" type="text" placeholder="Rua Curador" />
+                                        <label for="inputRuaCurador">Rua/Logradouro</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="form-floating">
+                                        <input class="form-control curador-input" id="inputNumeroCurador" name="curador_endereco_numero" type="number" placeholder="Número Curador" />
+                                        <label for="inputNumeroCurador">Número</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-floating">
+                                        <input class="form-control curador-input curador-cidade" id="inputCidadeCurador" name="curador_endereco_cidade" type="text" placeholder="Cidade Curador" />
+                                        <label for="inputCidadeCurador">Cidade</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-floating">
+                                        <input class="form-control curador-input curador-estado" id="inputEstadoCurador" name="curador_endereco_estado" type="text" placeholder="Estado Curador" />
+                                        <label for="inputEstadoCurador">Estado</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row mb-3">
+                                <!-- Data Nascimento Curador -->
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-floating">
+                                        <input class="form-control curador-input" id="inputDataNascCurador" name="curador_dataNascimento" type="date" />
+                                        <label for="inputDataNascCurador">Data de Nascimento</label>
+                                    </div>
+                                </div>
+                                <!-- Grau de Parentesco Curador -->
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-floating">
+                                        <input class="form-control curador-input" id="inputGrauParentescoCurador" name="curador_grauParentesco" type="text" placeholder="Grau de Parentesco" required />
+                                        <label for="inputGrauParentescoCurador">Grau de Parentesco</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <!-- Telefone Curador -->
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-floating">
+                                        <input class="form-control curador-input" id="inputTelefoneCurador" name="curador_telefone" type="tel" placeholder="Telefone" />
+                                        <label for="inputTelefoneCurador">Telefone</label>
+                                    </div>
+                                </div>
+                                <!-- Telefone Curador -->
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-floating">
+                                        <input class="form-control curador-input" id="inputTelefoneCurador2" name="curador_telefone_2" type="tel" placeholder="Telefone Alternativo" />
+                                        <label for="inputTelefoneCurador2">Telefone Alternativo (Opcional)</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-check mt-2 mb-4">
+                            <input class="form-check-input" type="checkbox" value="1" id="curadorNaoPossui" name="curador_nao_possui">
+                            <label class="form-check-label" for="curadorNaoPossui">
+                                Não possui Curador / Responsável Legal
+                            </label>
+                        </div>
+
+                        <!-- 4. INFORMAÇÕES DE ACOLHIMENTO E BENEFÍCIO -->
+                        <h5 class="mt-4 mb-3 border-bottom pb-2 text-primary">Status e Saúde</h5>
+
+                        <div class="row mb-3">
+                            <!-- Data de Acolhimento (coluna 'dataAcolhimento' em 'acolhido') -->
+                            <div class="col-md-4 mb-3">
+                                <div class="form-floating">
+                                    <input class="form-control" id="inputDataAcolhimento" name="data_acolhimento" type="date" value="<?php echo date('Y-m-d'); ?>" required />
+                                    <label for="inputDataAcolhimento">Data de Acolhimento</label>
+                                </div>
+                            </div>
+                            <!-- Tipo de Benefício (coluna 'tipoBeneficio' em 'acolhido') -->
+                            <div class="col-md-4 mb-3">
+                                <div class="form-floating">
+                                    <input class="form-control" id="inputTipoBeneficio" name="tipo_beneficio" type="text" placeholder="Ex: Bolsa Família, aposentadoria" />
+                                    <label for="inputTipoBeneficio">Tipo de Benefício</label>
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" value="1" id="beneficioNaoPossui" name="beneficio_nao_possui">
+                                    <label class="form-check-label" for="beneficioNaoPossui">
+                                        Não possui benefício
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- Origem do Acolhimento (coluna 'origemAcolhimento' em 'acolhido') -->
+                            <div class="col-md-4 mb-3">
+                                <div class="form-floating">
+                                    <input class="form-control" id="inputOrigemAcolhimento" name="origem_acolhimento" type="text" placeholder="Ex: Rua, Hospital, Família" />
+                                    <label for="inputOrigemAcolhimento">Origem do Acolhimento</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CID DINÂMICO (cidacolhido) -->
+                        <h5 class="mt-5 mb-3 border-bottom pb-2 text-primary">CIDs (Classificação Internacional de Doenças)</h5>
+                        <div id="cid-container">
+                            <!-- Blocos de CID serão adicionados aqui -->
+                        </div>
+                        <button type="button" class="btn btn-outline-info w-100 py-2 mt-3 mb-4" id="add-cid-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-medical me-2" viewBox="0 0 16 16">
+                                <path d="M8 10a.5.5 0 0 0 .5-.5V8h2a.5.5 0 0 0 0-1h-2V5.5a.5.5 0 0 0-1 0V7h-2a.5.5 0 0 0 0 1h2v1.5a.5.5 0 0 0 .5.5z"/>
+                                <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
+                            </svg>
+                            Adicionar CID
+                        </button>
+
+                        <!-- Motivo da Institucionalização (coluna 'motivoInstitucionalizacao' em 'acolhido') -->
+                        <div class="mb-3">
+                            <label for="motivoInstitucionalizacao">Motivo da Institucionalização</label>
+                            <textarea class="form-control" id="motivoInstitucionalizacao" name="motivo_institucionalizacao" rows="3" required placeholder="Descreva o motivo principal do acolhimento."></textarea>
+                        </div>
+                        
+                        <!-- Histórico (coluna 'historico' em 'acolhido') -->
+                        <div class="mb-3">
+                            <label for="historicoAcolhido">Histórico/Observações Gerais</label>
+                            <textarea class="form-control" id="historicoAcolhido" name="historico" rows="4" placeholder="Detalhes adicionais sobre o acolhido, seu estado atual e necessidades."></textarea>
+                        </div>
+
+                        
+                        <!-- 5. CADASTRO DINÂMICO DE FAMILIARES (Tabela 'familiar') -->
+                        <h5 class="mt-5 mb-3 border-bottom pb-2 text-primary">Familiares</h5>
+                        <div id="familiares-container">
+                            <!-- Blocos de Familiar serão adicionados aqui -->
+                        </div>
+                        <button type="button" class="btn btn-outline-success w-100 py-2 mt-3 mb-4" id="add-familiar-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-lines-fill me-2" viewBox="0 0 16 16">
+                                <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm2.5 1h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-4 4a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H9a.5.5 0 0 1-.5-.5zm-2 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z"/>
+                            </svg>
+                            Adicionar Familiar
+                        </button>
+                        
+                        <!-- Botão de Cadastro Final -->
+                        <div class="mt-5 mb-0">
+                            <button type="submit" class="btn btn-primary btn-block w-100 py-3 fs-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-save-fill me-2" viewBox="0 0 16 16">
+                                    <path d="M8.5 1.5A1.5 1.5 0 0 1 10 0h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h4a1.5 1.5 0 0 1 1.5 1.5z"/>
+                                    <path d="M5.5 10a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z"/>
+                                </svg>
+                                Salvar Cadastro do Acolhido
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center py-3">
+                    <div class="text-muted small">Certifique-se de que todos os campos obrigatórios foram preenchidos.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let familiarCount = 0;
+        let cidCount = 0;
+        const form = document.getElementById('form-cadastro');
+        const familiarContainer = document.getElementById('familiares-container');
+        const cidContainer = document.getElementById('cid-container');
+        const addFamiliarBtn = document.getElementById('add-familiar-btn');
+        const addCidBtn = document.getElementById('add-cid-btn');
+
+        // ==========================================
+        // Usabilidade: Desabilitar envio por ENTER
+        // ==========================================
+        form.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.keyCode === 13) {
+                // Previne o envio se o Enter for pressionado em qualquer lugar do formulário
+                e.preventDefault();
+                // Opcional: mover o foco para o próximo campo
+                const inputs = Array.from(this.querySelectorAll('input:not([disabled]):not([readonly]), textarea:not([disabled]), select:not([disabled])'));
+                const index = inputs.indexOf(e.target);
+                if (index > -1 && index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                }
+            }
+        });
+
+        // ==========================================
+        // Funções Auxiliares: CPF e CEP
+        // ==========================================
+
+        // Função de validação de CPF (Algoritmo Básico) - Mantida
+        function validarCPF(cpf) {
+            cpf = cpf.replace(/[^\d]/g, "");
+            if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) return false; 
+            
+            let sum = 0, remainder;
+            for (let i = 1; i <= 9; i++) sum += parseInt(cpf.substring(i - 1, i)) * (11 - i);
+            remainder = (sum * 10) % 11;
+            if ((remainder === 10) || (remainder === 11)) remainder = 0;
+            if (remainder !== parseInt(cpf.substring(9, 10))) return false;
+            
+            sum = 0;
+            for (let i = 1; i <= 10; i++) sum += parseInt(cpf.substring(i - 1, i)) * (12 - i);
+            remainder = (sum * 10) % 11;
+            if ((remainder === 10) || (remainder === 11)) remainder = 0;
+            if (remainder !== parseInt(cpf.substring(10, 11))) return false;
+            
+            return true;
+        }
+
+        // Função de formatação de CPF - Mantida
+        function formatarCPF(input) {
+            let value = input.value.replace(/\D/g, ''); 
+            value = value.replace(/(\d{3})(\d)/, '$1.$2');
+            value = value.replace(/(\d{3})(\d)/, '$1.$2');
+            value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+            input.value = value;
+        }
+
+        // Função de validação de CPF e feedback visual - Mantida
+        function handleCpfValidation(inputElement, feedbackElement) {
+            formatarCPF(inputElement);
+            const isValid = validarCPF(inputElement.value);
+            
+            if (inputElement.value.length === 14 && !isValid) {
+                inputElement.classList.add('is-invalid');
+                inputElement.classList.remove('is-valid');
+                if (feedbackElement) feedbackElement.textContent = "CPF inválido.";
+                return false;
+            } else if (inputElement.value.length === 14 && isValid) {
+                inputElement.classList.remove('is-invalid');
+                inputElement.classList.add('is-valid');
+                return true;
+            } else {
+                inputElement.classList.remove('is-invalid', 'is-valid');
+                return true;
+            }
+        }
+        
+        // Aplica formatação e validação ao CPF do Acolhido e Curador (Setup inicial)
+        const inputAcolhidoCpf = document.getElementById('inputCPF');
+        const feedbackAcolhidoCpf = document.getElementById('cpf-feedback');
+        inputAcolhidoCpf.addEventListener('input', () => formatarCPF(inputAcolhidoCpf));
+        inputAcolhidoCpf.addEventListener('blur', () => handleCpfValidation(inputAcolhidoCpf, feedbackAcolhidoCpf));
+
+        const inputCuradorCpf = document.getElementById('inputCpfCurador');
+        const feedbackCuradorCpf = document.getElementById('curador-cpf-feedback');
+        inputCuradorCpf.addEventListener('input', () => formatarCPF(inputCuradorCpf));
+        inputCuradorCpf.addEventListener('blur', () => handleCpfValidation(inputCuradorCpf, feedbackCuradorCpf));
+
+        // Funções CEP - Atualizada para ser mais genérica e reutilizável
+        function setupCepAutocomplete(cepInputId, ruaInputId, cidadeInputId, estadoInputId, feedbackId) {
+            const cepInput = document.getElementById(cepInputId);
+            const ruaInput = document.getElementById(ruaInputId);
+            const cidadeInput = document.getElementById(cidadeInputId);
+            const estadoInput = document.getElementById(estadoInputId);
+            const feedbackElement = document.getElementById(feedbackId);
+            
+            if (!cepInput || !ruaInput || !cidadeInput || !estadoInput) return;
+
+            cepInput.addEventListener('input', function() {
+                let cepValue = this.value.replace(/\D/g, '');
+                cepValue = cepValue.replace(/^(\d{5})(\d)/, '$1-$2');
+                this.value = cepValue;
+            });
+
+            cepInput.addEventListener('blur', function() {
+                const cep = this.value.replace(/\D/g, '');
+
+                if (cep.length !== 8) {
+                    this.classList.add('is-invalid');
+                    this.classList.remove('is-valid');
+                    feedbackElement.textContent = 'CEP deve ter 8 dígitos.';
+                    return;
+                }
+
+                this.classList.remove('is-invalid', 'is-valid');
+                ruaInput.value = 'Buscando...';
+                cidadeInput.value = 'Buscando...';
+                estadoInput.value = 'Buscando...';
+                
+                // Limpa o feedback no início da busca
+                feedbackElement.textContent = ''; 
+                
+                fetch(`https://viacep.com.br/ws/${cep}/json/`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.erro) {
+                            ruaInput.value = '';
+                            cidadeInput.value = '';
+                            estadoInput.value = '';
+                            cepInput.classList.add('is-invalid');
+                            feedbackElement.textContent = 'CEP não encontrado.';
+                        } else {
+                            ruaInput.value = data.logradouro || '';
+                            cidadeInput.value = data.localidade || '';
+                            estadoInput.value = data.uf || '';
+                            cepInput.classList.remove('is-invalid');
+                            cepInput.classList.add('is-valid');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Erro ao buscar CEP:', error);
+                        cepInput.classList.add('is-invalid');
+                        feedbackElement.textContent = 'Erro na comunicação com a API de CEP.';
+                        ruaInput.value = '';
+                        cidadeInput.value = '';
+                        estadoInput.value = '';
+                    });
+            });
+        }
+        
+        // Configura o autocomplete para Acolhido e Curador
+        setupCepAutocomplete('inputCep', 'inputRua', 'inputCidade', 'inputEstado', 'cep-feedback');
+        setupCepAutocomplete('inputCepCurador', 'inputRuaCurador', 'inputCidadeCurador', 'inputEstadoCurador', 'curador-cep-feedback');
+
+
+        // ==========================================
+        // Lógica CID Dinâmico (API ICD/CID - DIRETA)
+        // ==========================================
+        
+        async function fetchCidDescription(cidCode) {
+            const upperCid = cidCode.toUpperCase().trim();
+            
+            // CHAMADA DIRETA À API BRASILAPI (RECOMENDADA PARA PRODUÇÃO)
+            const apiUrl = `https://brasilapi.com.br/api/cid10/v1/${upperCid}`; 
+            
+            console.log("Consultando API CID diretamente:", apiUrl);
+
+            await new Promise(resolve => setTimeout(resolve, 300)); // Simula latência
+
+            try {
+                const response = await fetch(apiUrl); 
+                
+                if (response.status === 404) {
+                    // 404 significa que a API funcionou, mas o CID não foi encontrado.
+                    return `CID '${upperCid}' não encontrado na base de dados (404).`;
+                }
+
+                if (!response.ok) {
+                    // Erro 5xx ou outro erro HTTP
+                    console.error(`Erro HTTP ${response.status} na API CID.`);
+                    return `Falha na API CID (HTTP ${response.status}).`;
+                }
+                
+                const data = await response.json();
+                
+                // A BrasilAPI retorna a descrição no campo 'descricao'
+                return data.descricao || `CID '${upperCid}' encontrado (Descrição vazia).`;
+
+            } catch (error) {
+                // Erro de rede ou CORS (o problema mais provável no XAMPP)
+                console.error('Falha crítica na requisição CID (CORS/Rede):', error);
+                return 'Falha de comunicação: Bloqueio de rede ou CORS.';
+            }
+        }
+
+        function createCidBlock() {
+            cidCount++;
+            const blockId = `cid-${cidCount}`;
+            const block = document.createElement('div');
+            block.className = 'input-group mb-3 cid-block';
+            block.id = blockId;
+
+            block.innerHTML = `
+                <div class="form-floating flex-grow-1">
+                    <input class="form-control cid-code" name="cid[${cidCount}][codigo]" type="text" placeholder="CID (Ex: F10.0)" maxlength="6" required />
+                    <label>Código CID (cidacolhido[codigo])</label>
+                </div>
+                <div class="form-floating flex-grow-1 ms-2">
+                    <input class="form-control cid-desc" name="cid[${cidCount}][descricao]" type="text" placeholder="Descrição" readonly />
+                    <label>Descrição CID (cidacolhido[descricao])</label>
+                </div>
+                <button type="button" class="btn btn-outline-danger remove-cid-btn ms-2" data-target="${blockId}">
+                    Remover
+                </button>
+            `;
+            cidContainer.appendChild(block);
+
+            const newCidInput = block.querySelector('.cid-code');
+            const newDescInput = block.querySelector('.cid-desc');
+
+            newCidInput.addEventListener('blur', async function() {
+                const cidCode = this.value;
+                // CID-10 requer pelo menos 3 caracteres (Letra + 2 dígitos)
+                if (cidCode.length >= 3) { 
+                    newDescInput.value = 'Buscando...';
+                    const description = await fetchCidDescription(cidCode);
+                    newDescInput.value = description;
+                    
+                    if (description.includes('Falha') || description.includes('não encontrado')) {
+                        this.classList.add('is-invalid');
+                    } else {
+                        this.classList.remove('is-invalid');
+                        this.classList.add('is-valid');
+                    }
+                } else {
+                    newDescInput.value = '';
+                    this.classList.remove('is-invalid', 'is-valid');
+                }
+            });
+        }
+        
+        // Adiciona o primeiro bloco de CID
+        createCidBlock();
+        addCidBtn.addEventListener('click', createCidBlock);
+
+        // Evento para remover CID
+        cidContainer.addEventListener('click', function(e) {
+            if (e.target.classList.contains('remove-cid-btn')) {
+                const targetId = e.target.getAttribute('data-target');
+                document.getElementById(targetId).remove();
+            }
+        });
+
+
+        // ==========================================
+        // Lógica de Formulário Dinâmico (Familiares)
+        // ==========================================
+        
+        function setupFamiliarCepAutocomplete(block) {
+            const index = block.id.split('-')[1];
+            // IDs para os campos dinâmicos de familiar
+            setupCepAutocomplete(`inputFamiliarCep${index}`, `inputFamiliarRua${index}`, `inputFamiliarCidade${index}`, `inputFamiliarEstado${index}`, `familiar-cep-feedback-${index}`);
+        }
+
+        // Função para criar o HTML do bloco de familiar
+        function createFamiliarBlock() {
+            familiarCount++;
+            const index = familiarCount;
+            const blockId = `familiar-${index}`;
+            const block = document.createElement('div');
+            block.className = 'border p-3 mb-3 rounded shadow-sm familiar-block';
+            block.id = blockId;
+
+            block.innerHTML = `
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6 class="mb-0 text-secondary">Familiar #${index}</h6>
+                    <button type="button" class="btn btn-sm btn-outline-danger remove-familiar-btn" data-target="${blockId}">Remover</button>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="form-floating">
+                            <input class="form-control" name="familiar[${index}][nome]" type="text" placeholder="Nome do Familiar" required />
+                            <label>Nome (nome)</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="form-floating">
+                            <input class="form-control" name="familiar[${index}][grauParentesco]" type="text" placeholder="Grau de Parentesco" required />
+                            <label>Grau de Parentesco (grauParentesco)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6 mb-3">
+                        <div class="form-floating">
+                            <input class="form-control" name="familiar[${index}][dataNascimento]" type="date" />
+                            <label>Data de Nascimento (dataNascimento)</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="form-floating">
+                            <input class="form-control" name="familiar[${index}][telefone]" type="tel" placeholder="Telefone" />
+                            <label>Telefone (telefone)</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ENDEREÇO DO FAMILIAR -->
+                <h6 class="mt-3 mb-3 border-bottom pb-1 text-muted">Endereço do Familiar</h6>
+                <div class="row mb-3">
+                    <div class="col-md-3 mb-3">
+                        <div class="form-floating">
+                            <input class="form-control" id="inputFamiliarCep${index}" name="familiar[${index}][endereco_cep]" type="text" placeholder="CEP" maxlength="9" />
+                            <label for="inputFamiliarCep${index}">CEP</label>
+                        </div>
+                        <div class="invalid-feedback" id="familiar-cep-feedback-${index}">
+                            CEP inválido ou não encontrado.
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="form-floating">
+                            <input class="form-control" id="inputFamiliarRua${index}" name="familiar[${index}][endereco_rua]" type="text" placeholder="Rua/Logradouro" />
+                            <label for="inputFamiliarRua${index}">Rua/Logradouro</label>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="form-floating">
+                            <input class="form-control" name="familiar[${index}][endereco_numero]" type="number" placeholder="Número" />
+                            <label>Número</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6 mb-3">
+                        <div class="form-floating">
+                            <input class="form-control" id="inputFamiliarCidade${index}" name="familiar[${index}][endereco_cidade]" type="text" placeholder="Cidade" />
+                            <label for="inputFamiliarCidade${index}">Cidade</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="form-floating">
+                            <input class="form-control" id="inputFamiliarEstado${index}" name="familiar[${index}][endereco_estado]" type="text" placeholder="Estado" />
+                            <label for="inputFamiliarEstado${index}">Estado</label>
+                        </div>
+                    </div>
+                </div>
+            `;
+            familiarContainer.appendChild(block);
+            
+            // Configurar autocomplete para este novo bloco de endereço
+            setupFamiliarCepAutocomplete(block);
+        }
+
+        // 1. Adicionar o primeiro bloco de familiar ao carregar
+        // createFamiliarBlock(); // Removido para iniciar sem familiar
+
+        // 2. Evento para adicionar novo familiar
+        addFamiliarBtn.addEventListener('click', createFamiliarBlock);
+
+        // 3. Evento para remover familiar
+        familiarContainer.addEventListener('click', function(e) {
+            if (e.target.classList.contains('remove-familiar-btn')) {
+                const targetId = e.target.getAttribute('data-target');
+                document.getElementById(targetId).remove();
+            }
+        });
+
+        // ==========================================
+        // Lógica de Checkboxes (Mãe/Pai, Curador, Benefício)
+        // ==========================================
+
+        // Lógica para tornar os campos de Nome da Mãe/Pai opcionais
+        const maeInput = document.getElementById('inputNomeMae');
+        const maeCheckbox = document.getElementById('maeNaoInformado');
+        const paiInput = document.getElementById('inputNomePai');
+        const paiCheckbox = document.getElementById('paiNaoInformado');
+
+        function toggleRequiredDisabled(input, checkbox) {
+            const isChecked = checkbox.checked;
+            input.required = !isChecked;
+            input.disabled = isChecked;
+            if (isChecked) {
+                input.value = ''; // Limpa o valor se for desabilitado
+                input.classList.remove('is-invalid');
+                input.classList.add('is-valid');
+            } else {
+                input.classList.remove('is-valid');
+            }
+        }
+
+        maeCheckbox.addEventListener('change', () => toggleRequiredDisabled(maeInput, maeCheckbox));
+        paiCheckbox.addEventListener('change', () => toggleRequiredDisabled(paiInput, paiCheckbox));
+        
+        // Lógica para Curador (desabilitar campos)
+        const curadorCheckbox = document.getElementById('curadorNaoPossui');
+        const curadorInputs = document.querySelectorAll('.curador-input');
+        
+        function toggleCuradorDisabled() {
+            const isChecked = curadorCheckbox.checked;
+            curadorInputs.forEach(input => {
+                const isRequired = input.hasAttribute('data-required');
+                
+                input.disabled = isChecked;
+                if (isChecked) {
+                    input.removeAttribute('required');
+                    input.value = '';
+                    input.classList.remove('is-invalid');
+                    input.classList.add('is-valid');
+                } else if (!isChecked && isRequired) {
+                    input.setAttribute('required', '');
+                    input.classList.remove('is-valid');
+                }
+            });
+            
+            // Tratamento especial para o CPF do curador para remover o feedback de erro
+            const curadorCpfFeedback = document.getElementById('curador-cpf-feedback');
+            if (isChecked) {
+                 curadorCpfFeedback.textContent = '';
+            }
+        }
+
+        curadorCheckbox.addEventListener('change', toggleCuradorDisabled);
+
+        // Lógica para Benefício (desabilitar campo)
+        const beneficioInput = document.getElementById('inputTipoBeneficio');
+        const beneficioCheckbox = document.getElementById('beneficioNaoPossui');
+        
+        beneficioCheckbox.addEventListener('change', () => toggleRequiredDisabled(beneficioInput, beneficioCheckbox));
+
+
+        // Inicializa o estado dos inputs (Adicionado data-required nos inputs do curador)
+        curadorInputs.forEach(input => {
+            if(input.hasAttribute('required')) {
+                input.setAttribute('data-required', 'true');
+            }
+        });
+
+        toggleRequiredDisabled(maeInput, maeCheckbox);
+        toggleRequiredDisabled(paiInput, paiCheckbox);
+        toggleCuradorDisabled();
+        toggleRequiredDisabled(beneficioInput, beneficioCheckbox);
+    });
+</script>
+
+
+ </div>
+    </div>
+</header> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+    // === CONFIGURAÇÃO DE TEMPO (Puxa valor do PHP) ===
+    const INACTIVITY_LIMIT_SEC = <?php echo TEMPO_LIMITE_INATIVIDADE; ?>;
+    const WARNING_TIME_SEC = <?php echo TEMPO_AVISO_PREVIO; ?>; 
+    const WARNING_POINT_SEC = INACTIVITY_LIMIT_SEC - WARNING_TIME_SEC; 
+    
+    // Caminhos
+    const RENEWAL_ENDPOINT = '<?php echo BASE_URL; ?>/dao/controleTempo.php'; // Ajuste o nome do arquivo se necessário
+    const LOGOUT_ENDPOINT = '<?php echo BASE_URL; ?>/dao/logout.php';
+
+    // Variáveis Globais
+    let displayTimerInterval; 
+    let sessionTimerId;       
+    let countdownId;          
+    let startTime;            
+    
+    // === FUNÇÕES GLOBAIS ESSENCIAIS ===
+    
+    function forceLogout() {
+        window.location.href = LOGOUT_ENDPOINT;
+    }
+
+    function startCountdown(seconds) {
+        let count = seconds;
+        const countdownElement = document.getElementById('countdown');
+        if (countdownElement) { countdownElement.textContent = count; }
+
+        countdownId = setInterval(() => {
+            count--;
+            if (countdownElement) { countdownElement.textContent = count; }
+
+            if (count <= 0) {
+                clearInterval(countdownId);
+                forceLogout(); 
+            }
+        }, 1000);
+    }
+
+    function showWarningModal() {
+        var modalEl = document.getElementById('sessionWarningModal');
+        // Instancia ou obtém o modal (Garantindo que a API do Modal seja usada)
+        var modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
+        modal.show();
+        startCountdown(WARNING_TIME_SEC); 
+    }
+    
+    function updateDisplayTimer() {
+        const elapsed = Math.floor((Date.now() - startTime) / 1000);
+        const remaining = INACTIVITY_LIMIT_SEC - elapsed;
+        const displayElement = document.getElementById('tempo-restante');
+        
+        if (remaining >= 0) {
+            const minutes = Math.floor(remaining / 60);
+            const seconds = remaining % 60;
+            const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (displayElement) {
+                displayElement.textContent = formattedTime;
+                
+                if (remaining <= WARNING_POINT_SEC) {
+                    displayElement.style.color = 'red';
+                } else {
+                    displayElement.style.color = 'inherit';
+                }
+            }
+        } else {
+            if (displayElement) { displayElement.textContent = '00:00'; }
+            clearInterval(displayTimerInterval);
+        }
+    }
+    
+    function startDisplayTimer() {
+        startTime = Date.now();
+        clearInterval(displayTimerInterval);
+        displayTimerInterval = setInterval(updateDisplayTimer, 1000);
+        updateDisplayTimer(); 
+    }
+
+    function resetTimer() {
+        clearTimeout(sessionTimerId); 
+        clearInterval(countdownId); 
+        
+        sessionTimerId = setTimeout(showWarningModal, WARNING_POINT_SEC * 1000);
+        
+        startDisplayTimer();
+    }
+    
+    // FUNÇÃO CRÍTICA: keepAlive (com debug)
+    function keepAlive() {
+        console.log('Botão Continuar Logado Clicado. Tentando renovar sessão em: ' + RENEWAL_ENDPOINT);
+        
+        // Envia requisição AJAX para renovar o tempo no servidor
+        fetch(RENEWAL_ENDPOINT, { method: 'POST' })
+            .then(response => {
+                if (response.ok) {
+                    console.log('Sessão renovada com sucesso. Fechando modal e resetando timers.');
+                    var modalEl = document.getElementById('sessionWarningModal');
+                    var modal = bootstrap.Modal.getInstance(modalEl);
+                    if (modal) { modal.hide(); }
+                    
+                    // Reseta os timers globais (que reinicia a contagem no cabeçalho e o aviso)
+                    resetTimer();
+                } else {
+                    // Isso pode ocorrer se o caminho PHP estiver errado ou se o servidor falhar
+                    console.error('Erro na resposta do servidor:', response.status, response.statusText);
+                }
+            })
+            .catch(error => {
+                // Isso pode ocorrer se o caminho for totalmente inválido ou se houver um erro de rede
+                console.error('Erro de rede/AJAX ao renovar a sessão:', error);
+            });
+    }
+
+    // === INTEGRAÇÃO E EVENTOS ===
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        // 1. Liga o botão "Continuar Logado" à função de renovação
+        const btnKeepAlive = document.getElementById('btnKeepAlive');
+        if (btnKeepAlive) {
+            btnKeepAlive.addEventListener('click', keepAlive);
+            console.log('Ouvinte de evento KeepAlive anexado.');
+        } else {
+            console.error('Elemento #btnKeepAlive não encontrado no DOM.');
+        }
+        
+        // 2. Eventos de atividade do usuário para reiniciar TUDO
+        ['click', 'mousemove', 'keypress', 'scroll', 'touchstart'].forEach(eventType => {
+            document.body.addEventListener(eventType, resetTimer, true);
+        });
+        
+        // 3. Inicializa os contadores no carregamento da página
+        resetTimer(); 
+    });
+
+</script>
+
+<div class="modal fade" id="sessionWarningModal" tabindex="-1" aria-labelledby="sessionWarningLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="sessionWarningLabel">Aviso de Inatividade</h5>
+            </div>
+            <div class="modal-body">
+                Sua sessão será encerrada em <span id="countdown"><?php echo TEMPO_AVISO_PREVIO; ?></span> segundos por inatividade. 
+                <p>Deseja continuar logado?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="forceLogout()">Sair Agora</button>
+                <button type="button" class="btn btn-primary" id="btnKeepAlive">Continuar Logado</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
